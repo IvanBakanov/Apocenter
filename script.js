@@ -4,27 +4,21 @@ const th = document.getElementsByTagName("th");
 document.forms.data.onsubmit = function () {
     event.preventDefault();
 
-    const Mf = input[0].value;
-    const Mc = input[1].value;
-    const Mp = input[2].value;
-    const P = input[3].value;
-    const t = input[4].value;
-
-    const W = P * t / (Mf * 1.5);
-
-    const M = Mc + Mp;
-    const V = W * Math.log((Mf + M) / M) * -1;
-
-    const h1 = V * t / 4;
-    const h = h1 + t * (V - t * 4.9) / 2
-
-    const array = [V, W, h1, h];
-    for (let i = 0; i < 4; i++) {
-        array[i] = Math.round(array[i]);
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = parseFloat(input[i].value);
     }
 
-    th[0].textContent = array[0];
-    th[1].textContent = array[1];
-    th[2].textContent = array[2];
-    th[3].textContent = array[3];
+    const W = arr[3] * arr[4] / (arr[0] * 1.5);
+
+    const M = arr[1] + arr[2];
+    const V = W * Math.log((arr[1] + M) / M);
+
+    const h1 = V * arr[4] / 4;
+    const h = h1 + arr[4] * (V - arr[4] * 4.9) / 2
+
+    arr = [V, W, h1, h];
+    for (let i = 0; i < 4; i++) {
+        th[i].textContent = Math.round(arr[i]);
+    }
 };
