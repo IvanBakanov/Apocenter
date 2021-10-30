@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Калькулятор параметров полета одноступенчатой ракеты.">
+    <link href="style.css" rel="stylesheet">
+    <title>Апоцентр 1.0</title>
+</head>
+
+<body>
+    <header>
+        <h1>Апоцентр</h1>
+        <p>Онлайн калькулятор</p>
+        <p>[30.10.2021]</p>
+    </header>
+    <main>
+        <section class="frame">
+            <form name="data">
+                <p><input required type="number" min="0.001" max="1000" step="0.001"> масса топлива, кг</p>
+                <p><input required type="number" min="0.001" max="1000" step="0.001"> масса конструкции ракеты, кг</p>
+                <p><input required type="number" min="0" max="1000" step="0.001"> масса полезной нагрузки, кг</p>
+                <p><input required type="number" min="0.001" max="1000" step="0.001"> средняя сила тяги двигателя, Н</p>
+                <p><input required type="number" min="0.1" max="1000" step="0.1"> время работы двигателя, с</p>
+                <button type="submit">Считать</button>
+                <button type="reset">Очистить</button>
+            </form>
+        </section>
+        <section class="frame">
+            <table width="50%" cellpadding="5">
+                <tr>
+                    <td>Конечная скорость, м/c</td>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Средняя скорость истечения, м/c</td>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Высота активного подъема, м</td>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Апогей траектории полета, м</td>
+                    <th></th>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <a href="mailto:altimion.space@gmail.com">altimion.space@gmail.com</a>
+        <p>© И. П. Баканов, 2021</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
