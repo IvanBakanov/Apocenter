@@ -15,8 +15,8 @@ document.forms.data.onsubmit = function () {
     const M = Mc + Mp;
     const V = W * Math.log((Mf + M) / M) * -1;
 
-    const h1 = V * t / 3;
-    const h = h1 + t * (V - t * 4.9) / 1.5
+    const h1 = V * t / 4;
+    const h = h1 + t * (V - t * 4.9) / 2
 
     const array = [V, W, h1, h];
     for (let i = 0; i < 4; i++) {
