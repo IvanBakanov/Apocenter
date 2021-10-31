@@ -1,5 +1,6 @@
 const input = document.getElementsByTagName("input");
 const th = document.getElementsByTagName("th");
+const k = 1.5;
 
 document.forms.data.onsubmit = function () {
     event.preventDefault();
@@ -9,13 +10,13 @@ document.forms.data.onsubmit = function () {
         arr[i] = parseFloat(input[i].value);
     }
 
-    const W = arr[3] * arr[4] / (arr[0] * 1.5);
+    const W = arr[3] * arr[4] / arr[0];
 
     const M = arr[1] + arr[2];
-    const V = W * Math.log((arr[1] + M) / M);
+    const V = W * Math.log((arr[1] + M) / M) / k;
 
-    const h1 = V * arr[4] / 4;
-    const h = h1 + arr[4] * (V - arr[4] * 4.9) / 2
+    const h1 = V * arr[4] / (2 * k);
+    const h = h1 + arr[4] * (V - arr[4] * 4.9) / k;
 
     arr = [V, W, h1, h];
     for (let i = 0; i < 4; i++) {
