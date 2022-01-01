@@ -9,7 +9,7 @@ document.forms.data.onsubmit = function () {
         arr[i] = parseFloat(input[i].value);
     }
 
-    const W = arr[3] * arr[4] / arr[0];
+    const W = arr[3] * arr[4] * 1000 / arr[0];
 
     const M = arr[1] + arr[2];
     const V = W * Math.log((M + arr[0]) / M) / 1.5;
