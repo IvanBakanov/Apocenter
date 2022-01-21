@@ -20,7 +20,7 @@ document.forms.data.onsubmit = function () {
     }
     const h1 = h_t(V / 1.5, arr[3]);
 
-    const h = h1 + h_t(V, V / g);
+    const h = h1 + h_t(V, Math.pow(V, 0.9) / g);
 
     arr = [V, W, h1, h];
     for (let i = 0; i < 4; i++) {
