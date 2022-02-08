@@ -2,6 +2,7 @@ const g = 9.81;
 
 const input = document.getElementsByTagName("input");
 const th = document.getElementsByTagName("th");
+const div = document.getElementById("rocket-container");
 
 document.forms.data.onsubmit = function () {
     event.preventDefault();
@@ -26,4 +27,10 @@ document.forms.data.onsubmit = function () {
     for (let i = 0; i < 4; i++) {
         th[i].textContent = Math.round(arr[i]);
     }
+
+    div.classList.add("rocket");
+};
+
+div.onanimationend = function () {
+    this.classList.remove("rocket");
 };
