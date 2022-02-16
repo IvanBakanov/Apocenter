@@ -1,0 +1,150 @@
+body {
+    font: 18px;
+}
+
+header, footer {
+    text-align: center;
+    line-height: 20px;
+}
+
+section {
+    text-align: left;
+}
+
+input {
+    width: 80px;
+    margin-right: 5px;
+}
+
+.frame {
+    border: 3px solid gray;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+}
+
+button {
+    padding: 10px;
+    margin-right: 3px;
+    background-color: gainsboro;
+    border: none;
+    color: gray;
+}
+
+.about {
+    width: 25%;
+    height: 50px;
+    margin: 20px;
+    padding: 3px;
+    text-align: center;
+    border: 2px solid gray;
+    color: blue;
+}
+
+.ground {
+    position: absolute;
+    width: 450px;
+    height: 100px;
+    right: 20px;
+    background: linear-gradient(to bottom, gray, white);
+}
+
+.stage-line {
+    position: absolute;
+    width: 100%;
+    border-top: 2px dashed #404040;
+}
+
+.rocket-position {
+    position: relative;
+    right: 350px;
+    bottom: 0px;
+    zoom: 0.8;
+}
+
+.rocket-motion {
+    animation-name: launch-rocket;
+    animation-duration: 5s;
+}
+
+.parachute {
+    visibility: hidden;
+    position: absolute;
+    right: 70px;
+    bottom: 270px;
+}
+
+.rescue-motion {
+    animation-name: deploy-parachute;
+    animation-duration: 3.5s;
+}
+
+.rocket-head {
+    position: absolute;
+    right: 0px;
+    bottom: 150px;
+    border: 6px solid transparent;
+    border-bottom: 30px solid #404040;
+}
+
+.rocket-body {
+    position: absolute;
+    width: 12px;
+    height: 150px;
+    right: 0px;
+    bottom: 0px;
+    background: #4682B4;
+}
+
+.force-center {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    right: 2.5px;
+    border-radius: 10px;
+}
+
+.fin-right {
+    position: absolute;
+    right: -15px;
+    bottom: 0px;
+	border-bottom: 30px solid #404040; 
+	border-right: 15px solid transparent;	
+}
+
+.fin-left {
+    position: absolute;
+    right: 12px;
+    bottom: 0px;
+	border-bottom: 30px solid #404040; 
+	border-left: 15px solid transparent;
+}
+
+.fin-middle {
+    position: absolute;
+    width: 1px;
+    height: 28px;
+    right: 6px;
+    bottom: 0px;
+    background: #404040;
+}
+
+@keyframes launch-rocket {
+    30% {
+        transform: translateY(-415px) rotate(20deg);
+    }
+    60% {
+        transform-origin: 100%;
+        transform: rotate(180deg) translateX(-150px) translateY(365px);
+    }
+    100% {
+        transform-origin: 500px -350px;
+        transform: rotate(360deg) translateX(180px) translateY(0px); 
+    }
+}
+
+@keyframes deploy-parachute {
+    100% {
+        transform: translateX(-20px) translateY(90px);
+    }
+}
