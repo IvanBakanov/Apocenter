@@ -29,7 +29,7 @@ document.forms.data.onsubmit = function () {
         th[i].textContent = Math.round(arr[i]);
     }
 
-    if (h >= 10) {
+    if (h >= 5) {
         rocket.classList.add("rocket-motion");
         setTimeout(deployParachute, 3500);
     }
