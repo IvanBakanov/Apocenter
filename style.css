@@ -1,5 +1,5 @@
 body {
-    font: 18px;
+    font-size: 18px;
 }
 
 header, footer {
@@ -12,7 +12,7 @@ section {
 }
 
 input {
-    width: 80px;
+    width: 90px;
     margin-right: 5px;
 }
 
@@ -24,11 +24,12 @@ input {
 }
 
 button {
+    font: 16px "Times New Roman";
     padding: 10px;
     margin-right: 3px;
     background-color: gainsboro;
     border: none;
-    color: gray;
+    color:gray;
 }
 
 .about {
