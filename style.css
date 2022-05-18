@@ -1,5 +1,5 @@
 body {
-    font-size: 18px;
+    font: 18px Arial;
 }
 
 header, footer {
@@ -24,7 +24,7 @@ input {
 }
 
 button {
-    font: 16px "Times New Roman";
+    font-size: 16px;
     padding: 10px;
     margin-right: 3px;
     background-color: gainsboro;
