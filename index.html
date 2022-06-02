@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Apocenter 1.5</title>
+</head>
+
+<body>
+    <header>
+        <h1>Апоцентр</h1>
+        <div class="about">
+            Теоретический расчет параметров полета одноступенчатой ракеты
+        </div>
+    </header>
+    <main>
+        <section class="frame">
+            <form name="data">
+                <p><input required type="number" min="50" max="10000" step="1" placeholder="50 г – 10 кг">
+                    полная масса ракеты, г
+                </p>
+                <p><input required type="number" min="10" max="1000" step="1" placeholder="10 г – 1 кг">
+                    масса топлива, г
+                </p>
+                <p><input required type="number" min="5" max="1000" step="0.5" placeholder="5 Н – 1 кН">
+                    средняя сила тяги, Н
+                </p>
+                <p><input required type="number" min="0.5" max="10" step="0.1" placeholder="0.5 с – 10 с">
+                    время работы двигателя, с
+                </p>
+                <p><input required type="number" min="0" max="30" step="1" placeholder="0° – 30°">
+                    отклонение от вертикали, °
+                </p>
+                <button type="submit">Считать</button>
+                <button type="reset">Очистить</button>
+            </form>
+        </section>
+        <section class="frame">
+            <table width="100%" cellpadding="5">
+                <tr>
+                    <td>Удельный импульс тяги, с</td>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Ускорение при старте, м/с</td>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Скорость по окончании тяги, м/с</td>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Апогей траектории полета, м</td>
+                    <th></th>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <div class="ground">
+                <div style="bottom: 430px" class="stage-line">
+                    <p>Apogee</p>
+                </div>
+                <div style="bottom: 280px" class="stage-line">
+                    <p>Rescue</p>
+                </div>
+                <div class="parachute"><img src="images/parachute.png" width="100px"></div>
+                <div class="rocket-position">
+                    <div class="rocket-head"></div>
+                    <div class="rocket-body">
+                        <div class="fin-left"></div>
+                        <div class="fin-right"></div>
+                        <div class="fin-middle"></div>
+                        <div style="bottom: 75px; background: blue" class="force-center"></div>
+                        <div style="bottom: 50px; background: red" class="force-center"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="mailto:altimion.space@gmail.com" style="text-decoration: none">altimion.space@gmail.com</a>
+        <p>© Altimion, 2022</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
